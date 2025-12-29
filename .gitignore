@@ -1,0 +1,17 @@
+# Build output
+out/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# OS junk
+.DS_Store
+Thumbs.db
