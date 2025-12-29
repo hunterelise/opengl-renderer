@@ -4,7 +4,7 @@ project(CleanRenderer VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# ---- Dependencies: GLFW + GLM via FetchContent ----
+# Dependencies: GLFW + GLM via FetchContent
 include(FetchContent)
 
 FetchContent_Declare(
@@ -24,7 +24,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glm)
 
-# ---- GLAD (local) ----
+# GLAD (local)
 add_library(glad STATIC
   external/glad/src/glad.c
 )
@@ -32,9 +32,11 @@ target_include_directories(glad PUBLIC
   external/glad/include
 )
 
-# ---- App ----
+# App
 add_executable(CleanRenderer
   src/main.cpp
+  src/Shader.h
+  src/Shader.cpp
 )
 
 target_link_libraries(CleanRenderer PRIVATE
