@@ -37,6 +37,7 @@ add_executable(CleanRenderer
   src/main.cpp
   src/Shader.h
   src/Shader.cpp
+  src/OrbitCamera.h
 )
 
 target_link_libraries(CleanRenderer PRIVATE
